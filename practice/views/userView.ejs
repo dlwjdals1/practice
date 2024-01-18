@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..//stylesheets/user.css">
+    <title>사용자 목록</title>
+</head>
+<body>
+    <h1>USER LIST</h1>
+    <hr>
+    <div>
+        <table style="border: 10px solid green; margin-left: auto; margin-right: auto;">
+            <thead>
+                <tr>
+                    <th>userid</th>
+                    <th>userpwd</th>
+                    <th>username</th>
+                    <th>usertel</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% var user = data %>
+                <% for(var i = 0 ; i < user.length ; i++ ) { %>
+                    <tr>
+                        <td><%= user[i].userid %></td>
+                        <td><%= user[i].userpwd %></td>
+                        <td><%= user[i].username %></td>
+                        <td><%= user[i].usertel %></td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+        
+    </div>  
+</body>
+</html>

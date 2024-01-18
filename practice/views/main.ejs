@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..//stylesheets/main.css">
+    <title>main page</title>
+</head>
+<body>
+    <h1>메인화면</h1>
+    <% if (user) { %>
+        <p>
+            <div><%= user.username %></div>
+            <div><%= user.usertel %></div>
+            <a href="/login/logout">로그아웃</a>
+        </p>
+        <p>
+            <a href="/bookadd">도서등록</a>
+            <a href="/list">도서목록</a>
+        </p>
+    <%  } else { %>
+        <p><a href="/join">회원가입</a></p>
+    <% } %>
+</body>
+</html>

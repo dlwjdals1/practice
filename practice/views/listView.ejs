@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..//stylesheets/list.css">
+    <title>도서목록</title>
+</head>
+<body>
+    <h1>BOOK LIST</h1>
+    <hr>
+    <div>
+      <table style="border: 10px solid green; margin-left: auto; margin-right: auto;">
+            <thead>
+                <tr>
+                    <th>bookcode</th>
+                    <th>bookname</th>
+                    <th>bookprice</th>
+                    <th>bookyears</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% var book = bookdata %>
+                <% for(var i = 0 ; i < book.length ; i++) {%>
+                    <tr>
+                        <td><%= book[i].bookcode %></td>
+                        <td><%= book[i].bookname %></td>
+                        <td><%= book[i].bookprice %></td>
+                        <td><%= book[i].bookyears %></td>
+                    </tr>
+                <% } %>    
+            </tbody>
+        </table>
+        <table style="border: 10px solid green; margin-left: auto; margin-right: auto;">
+            <thead>
+                <th>bookname</th>
+                <th>bookprice</th>
+            </thead>
+            <form action="/list" method="get">
+                도서 이름: <input type="text" name="bookname" placeholder="도서 이름" required></br>
+                도서 가격: <input type="text" name="bookprice" placeholder="도서 가격" required></br>
+                <button type="submit">담기</button>
+            </form>
+            <tbody>
+                
+            </tbody>
+            </table>
+        </table>
+   </div>
+</body>
+</html>

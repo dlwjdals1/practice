@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..//stylesheets/join.css">
+    <title>회원가입</title>
+</head>
+<body>
+    <div>
+    <h1>회원가입</h1>
+    </div>
+    <form action="/join" method="post">
+        ID: <input type="text" name="userid" placeholder="ID" required><br/>
+        PWD: <input type="text" name="userpwd" placeholder="PWD" required><br/>
+        NAME: <input type="text" name="username" placeholder="NAME" required><br/>
+        TEL: <input type="text" name="usertel" placeholder="TEL" required><br/>
+        <button type="submit">submit</button>
+        <div>
+            <p class="margin">이미 계정을 갖고 계신가요?<a href="/login"> 로그인하기 </a></p>
+        </div>
+    </form>
+</body>
+</html>

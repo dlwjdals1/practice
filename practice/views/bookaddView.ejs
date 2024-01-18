@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..//stylesheets/bookadd.css">
+    <title>도서등록</title>
+</head>
+<body>
+    <div>
+        <h1>도서등록</h1>
+    </div>
+    <form action="/bookadd" method="post">
+        <input type="text" name="bookcode" placeholder="bookcode" required><br/>
+        <input type="text" name="bookname" placeholder="bookname" required><br/>
+        <input type="text" name="bookprice" placeholder="bookprice" required><br/>
+        <input type="text" name="bookyears" placeholder="bookyears" required><br/>
+        <button type="submit">add</button>
+    </form>
+</body>
+</html>
